@@ -8,12 +8,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:launchMode="singleTop"
-            android:label="This is FirstActivity">
-
+        <activity
+            android:name=".MainActivity"
+            android:label="This is FirstActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,10 +29,13 @@
         <activity android:name=".WebTest">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:scheme="http" />
             </intent-filter>
         </activity>
+        <activity android:name=".ListTestActivity"></activity>
     </application>
 
 </manifest>
