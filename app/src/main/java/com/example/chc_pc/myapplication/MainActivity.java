@@ -51,6 +51,16 @@ public class MainActivity extends Activity {
             }
         });
 
+        Button buttonToList = (Button) findViewById(R.id.buttonToList);
+        buttonToList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ListTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
     @Override
