@@ -40,7 +40,7 @@ public class Main3Activity extends Activity {
                 dialog.setNegativeButton("cancel",new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        finish();
                     }
                 });
                 dialog.show();

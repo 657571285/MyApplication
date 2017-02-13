@@ -4,16 +4,28 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.example.chc_pc.myapplication.ui.TopTitle;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListTestActivity extends Activity {
 
     private List<Fruit> fruitList = new ArrayList<Fruit>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_test);
+        TopTitle fruitlisttitle = (TopTitle) findViewById(R.id.fruitlist_title);
+        fruitlisttitle.setTitle("图片列表");
+        fruitlisttitle.setLeftClickListener(new TopTitle.LeftClickListener() {
+            @Override
+            public void onLeftClick() {
+                finish();
+                overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+            }
+        });
         initFruits();
         FruitAdapter adapter = new FruitAdapter(ListTestActivity.this,R.layout.fruit_item,fruitList);
         ListView listView = (ListView) findViewById(R.id.list_view);
